@@ -1,0 +1,345 @@
+.course-details-page {
+  background: #f8f9fa;
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.course-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.main-content section {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Course Header */
+.course-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.difficulty-badge {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background: var(--accent-primary);
+  color: #ffffff;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.course-title h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: #4a5568;
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Prerequisites */
+.prerequisites h2 {
+  color: #2d3748;
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+.prerequisites ul {
+  list-style: none;
+  padding: 0;
+}
+
+.prerequisites li {
+  color: #4a5568;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.prerequisites li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent-primary);
+}
+
+/* Learning Path */
+.learning-path h2 {
+  color: #2d3748;
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 2rem;
+}
+
+.phase-card {
+  background: #f7fafc;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+.phase-card h3 {
+  color: var(--accent-primary);
+  margin-bottom: 1rem;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.phase-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.phase-card li {
+  color: #4a5568;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.phase-card li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--accent-primary);
+}
+
+/* Syllabus */
+.detailed-syllabus h2 {
+  color: #2d3748;
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 2rem;
+}
+
+.week-card {
+  background: #f7fafc;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.week-header {
+  padding: .8rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.week-header:hover {
+  background: #f7fafc;
+}
+
+.week-header h3 {
+  color: #2d3748;
+  margin: 0;
+  font-family: 'Share Tech Mono', monospace;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.week-header .toggle-icon {
+  transition: transform 0.3s ease;
+  color: var(--accent-primary);
+  font-size: 1.2rem;
+}
+
+.week-header.active .toggle-icon {
+  transform: rotate(180deg);
+}
+
+.week-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background: #f8f9fa;
+}
+
+.week-content.active {
+  max-height: 1000px;
+  transition: max-height 0.5s ease-in;
+}
+
+.lesson-content {
+  padding: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.lesson-content h4 {
+  color: var(--accent-primary);
+  margin-bottom: 1rem;
+}
+
+.lesson-content h5 {
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.lesson-content ul {
+  list-style: none;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.lesson-content li {
+  color: #4a5568;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.lesson-content li::before {
+  content: "•";
+  position: absolute;
+  left: -1.5rem;
+  color: var(--accent-primary);
+  font-size: 1.2rem;
+}
+
+.lesson-content p {
+  color: #4a5568;
+}
+
+/* Certification */
+.certification h2, .certification h3 {
+  color: #2d3748;
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+.certification-requirements h4 {
+  color: var(--accent-primary);
+  margin-bottom: 1rem;
+}
+
+.certification-requirements ul {
+  list-style: none;
+  padding: 0;
+}
+
+.certification-requirements li {
+  color: #4a5568;
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.certification-requirements li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--accent-primary);
+}
+
+/* Enrollment Section Styles */
+.enrollment-section {
+  position: sticky;
+  top: 2rem;
+}
+
+.enrollment-card {
+  text-align: center;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.enrollment-card h2 {
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+}
+
+.enrollment-info {
+  margin-bottom: 2rem;
+}
+
+.free-course-badge {
+  display: inline-block;
+  background: var(--accent-green);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.enrollment-description {
+  color: #4a5568;
+  font-size: 1.1rem;
+}
+
+.btn-enroll {
+  width: 100%;
+  padding: 1rem;
+  background: var(--accent-primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.btn-enroll:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--glow-blue);
+}
+
+.enrollment-features {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #4a5568;
+}
+
+.feature span {
+  color: var(--accent-green);
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .course-content {
+    padding: 0 1rem;
+  }
+
+  .course-title h1 {
+    font-size: 2rem;
+  }
+
+  .main-content section {
+    padding: 1.5rem;
+  }
+
+  .enrollment-section {
+    position: static;
+    margin-top: 2rem;
+  }
+
+  .enrollment-card {
+    padding: 1.5rem;
+  }
+} 
